@@ -231,6 +231,49 @@ def move(n, a, b ,c):
         move(1, a, b, c)
         move(n-1, b, a, c)
 
+def getSum():
+    L = []
+    n = 1
+    while n <= 99:
+        L.append(n)
+        n = n +2
+    print(L)
+
+def getInfo():
+    L  = ['Allen', 'Tom', 'Bob', 'Jack', 'Hello']
+    print([L[0],L[1],L[2]])
+
+    r =[]
+    for  i in range(3):
+        r.append(L[i])
+    print(r)
+
+    print(L[0:3])
+
+    print(L[:3])
+    print(L[1:3])
+    print(L[-1])
+    print(L[-3:])
+    L = list(range(100))
+    print(L)
+    print(L[:10])
+    print(L[-10:])
+    print(L[10:20])
+    print(L[:10:2])
+    print(L[::5])
+
+def trim(str):
+    #return str.strip()
+    n = len(str)
+    if n ==0:
+        return ''
+    while str[0] == '':
+         str = str[1:]
+    while str[-1] == '':
+         str = str[:-1]
+    print(str)
+
+
 def main():
     check_version()
     #input_name()
@@ -253,8 +296,11 @@ def main():
     #person('Allen',25,city='Shanghai',job='Engineer')
     #print(product(5,6,7))
     #print(fact(100))
-    move(4, 'A', 'B', 'C')
-
+    # move(4, 'A', 'B', 'C')
+    #getSum()
+    #getInfo()
+    print(trim('  hello world !  '))
+    print(trim('  f  '))
 
 
 
